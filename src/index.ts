@@ -13,7 +13,7 @@ route.get('/', (req: Request, res: Response) => {
 })
 
 route.get('/results', (req: Request, res: Response) => {
-  res.sendFile('Lotofácil_Resultados.xlsx', { root: __dirname })
+  res.download(process.cwd() + '/public/lotoResults.xlsx')
 })
 
 app.use(route)
