@@ -13,10 +13,9 @@ route.get('/', (req: Request, res: Response) => {
 })
 
 route.get('/results', (req: Request, res: Response) => {
-  res.json({ message: 'Vou devolver a planilha aqui' })
+  res.sendFile('Lotofácil_Resultados.xlsx', { root: __dirname })
 })
 
 app.use(route)
-
 
 app.listen(3333, () => 'server running on port 3333')
